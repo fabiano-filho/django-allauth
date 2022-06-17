@@ -145,10 +145,19 @@ AUTHENTICATION_BACKENDS = [
 
 SITE_ID = 1
 
-ACCOUNT_FORMS = {'login': 'signInUp.forms.LoginForm_'}
+ACCOUNT_FORMS = {
+    'login': 'signInUp.forms.LoginForm_',
+    'signup': 'signInUp.forms.SignupForm_',
+}
+
 
 ACCOUNT_SESSION_REMEMBER = True
 
 LOGIN_REDIRECT_URL = '/'
 
 LOGOUT_REDIRECT_URL = '/'
+
+ACCOUNT_SIGNUP_REDIRECT_URL = '/accounts/login'
+
+ACCOUNT_AUTHENTICATED_LOGIN_REDIRECTS = False
+
