@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'allauth.account',	
     'allauth.socialaccount',
     # Local apps
+    'pages.apps.PagesConfig',
 
 ]
 
@@ -147,3 +148,7 @@ SITE_ID = 1
 ACCOUNT_FORMS = {'login': 'signInUp.forms.LoginForm_'}
 
 ACCOUNT_SESSION_REMEMBER = True
+
+LOGIN_REDIRECT_URL = '/'
+
+LOGOUT_REDIRECT_URL = '/'
