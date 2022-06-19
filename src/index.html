@@ -1,14 +1,30 @@
-{% extends 'base.html' %}
-{% block title %}{{title}}{% endblock %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="tailwind.css">
+    <title>TailwindCss</title>
+</head>
+<body class="h-screen w-screen">
+    <nav class="w-full flex justify-between items-center px-10  h-16 bg-sky-800">
+        <div class="ml-10 font-semibold text-xl text-white">
+            Logo
+        </div>
+        <div class="mr-10 flex items-center gap-6 text-xl text-white font-semibold">
+            <a href="{% url 'account_logout' %}">Sair</a>
+            <a href="{% url 'account_login' %}">Entrar</a>
+            <a href="{% url 'account_signup' %}">Inscreva-se</a>
+        </div>
+    </nav>
 
-{% block content %}
-{% if user.is_authenticated %}
-    <div class="ml-20 mr-20 py-10">
+    <main class="ml-20 mr-20 py-10">
         <h1 class="text-4xl text-gray-700">Home</h1>
         <div class="mt-3 mb-1 w-px h-px bg-gray-400 w-full"></div>
         <p class="mt-3 text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, sunt veritatis! Veniam necessitatibus amet modi nulla sed in commodi dolor delectus facilis minima, molestias alias perspiciatis. Quis ex ullam accusantium.</p>
         <p class="mt-3 text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, sunt veritatis! Veniam necessitatibus amet modi nulla sed in commodi dolor delectus facilis minima, molestias alias perspiciatis. Quis ex ullam accusantium.</p>
         <p class="mt-3 text-gray-700">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, sunt veritatis! Veniam necessitatibus amet modi nulla sed in commodi dolor delectus facilis minima, molestias alias perspiciatis. Quis ex ullam accusantium.</p>
-    </div>
-{% endif %}
-{% endblock %}
+    </main>
+
+</body>
+</html>
