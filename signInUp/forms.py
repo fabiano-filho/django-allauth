@@ -1,9 +1,10 @@
 from allauth.account.forms import LoginForm, SignupForm
 from django import forms
 
-class LoginForm_(LoginForm):
+class MyLoginForm(LoginForm):
+
     def __init__(self, *args, **kwargs):
-        super(LoginForm_, self).__init__(*args, **kwargs)
+        super(MyLoginForm, self).__init__(*args, **kwargs)
         self.fields['login'].widget = forms.TextInput(
             attrs={
                 'class': 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline'
@@ -12,11 +13,11 @@ class LoginForm_(LoginForm):
             attrs={
                 'class': 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
             })
+    
 
-
-class SignupForm_(SignupForm):
+class MySignupForm(SignupForm):
     def __init__(self, *args, **kwargs):
-        super(SignupForm_, self).__init__(*args, **kwargs)
+        super(MySignupForm, self).__init__(*args, **kwargs)
         self.fields['username'].widget = forms.TextInput(
             attrs={
                 'class': 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline'
@@ -34,6 +35,5 @@ class SignupForm_(SignupForm):
             attrs={
                 'class': 'shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-2 leading-tight focus:outline-none focus:shadow-outline'
             })
-        
-        
+    
     

@@ -146,8 +146,8 @@ AUTHENTICATION_BACKENDS = [
 SITE_ID = 1
 
 ACCOUNT_FORMS = {
-    'login': 'signInUp.forms.LoginForm_',
-    'signup': 'signInUp.forms.SignupForm_',
+    'login': 'signInUp.forms.MyLoginForm',
+    'signup': 'signInUp.forms.MySignupForm',
 }
 
 
