@@ -14,4 +14,3 @@ DATABASES = {
     'default': env.db(),
 }
 
-print(STATIC_URL)
