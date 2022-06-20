@@ -1,6 +1,6 @@
 import environ
 
-from base import *
+from signInUp.settings.base import *
 
 env = environ.Env()
 
@@ -13,3 +13,5 @@ ALLOWED_HOSTS = env.list('ALLOWED_HOSTS')
 DATABASES = {
     'default': env.db(),
 }
+
+print(STATIC_URL)
