@@ -1,10 +1,10 @@
 module.exports = {
-    content: [],
+    content: ["./templates/**/*.{html,js}"],
     theme: {
       extend: {},
     },
     plugins: [],
-    safelist: [
-        {pattern: /^.*$/}
-    ],
+    // safelist: [
+    //     {pattern: /^.*$/}
+    // ],
   }
