@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
-    <title>Document</title>
+    <title>SignInUp</title>
 </head>
 <body class="h-screen w-screen">
     <nav class="w-full flex justify-between items-center px-10  h-16 bg-sky-800">
-        <div class="ml-10 font-semibold text-xl text-white">
+        <div class="ml-7 font-semibold text-xl text-white">
             Logo
         </div>
-        <div class="mr-10 flex items-center gap-6 text-xl text-white font-semibold">
+        <div class="mr-7 flex items-center gap-6 text-xl text-white font-semibold">
             {% if user.is_authenticated %}
             <form method="post" action="{% url 'account_logout' %}">
                 {% csrf_token %}
                 {% if redirect_field_value %}
                   <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}"/>
                 {% endif %}
-                <button class="STYLE_ME" type="submit">Sair</button>
+                <button type="submit">Sair</button>
               </form>
             {% else %}
             <a href="{% url 'account_login' %}">Entrar</a>
