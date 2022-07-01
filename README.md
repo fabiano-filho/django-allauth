@@ -5,4 +5,3 @@ Para rodar o projeto em sua maquina:
 - instale as dependências com `pip install -r requirements.txt`
 - rode com `python manage.py runserver`
 
-Url da aplicação: https://django-signinup.herokuapp.com/
